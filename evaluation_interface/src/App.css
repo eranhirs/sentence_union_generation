@@ -1,0 +1,203 @@
+:root {
+}
+
+/* Put spaces around highlight-within-text-area-container */ 
+.highlight-within-text-area-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+ }
+
+.step-button.instructions-button {
+    float: left;
+}
+
+/* Move submit buttons that show in the step phase to the right */
+ .submit-button.step-button {
+     float: right;
+ }
+
+ /* Space before sentence */
+ .sentence {
+     margin-top: 10px;
+ }
+
+
+ /* Put steps-btn-group in the middle of page */
+ .steps-btn-group {
+     /* margin-left: 50%; */
+     /* margin-left: auto; */
+     margin-bottom: 30px;
+ }
+
+ /* Put border around highlight-within-text-area editors */ 
+ .highlight-within-text-area-container {
+    border: 1px #767676 solid;
+    padding: 5px;
+ }
+
+ /* Match the padding of the other sentences */
+ .merge-sentences-step textarea {
+    padding: 5px;
+ }
+ 
+  /* Disabled functionality for the highlighter class */
+  .sentence .disabled {
+    background-color: #f8f8f8;
+    border-color: #d4d4d4;
+    color: #545454;
+    cursor: text;
+  }
+
+  /* Highlight chosen sentences */
+  .sentence .highlighted {
+    border-color: var(--highlight-yellow);
+    border-width: 2px;
+    cursor: text;
+  }
+    
+ /* Highlight cursor */
+ .sentence .input-group.highlight {
+    cursor: text;
+}
+
+ /* Removing padding that causes higlighting part of a word create spaces, and also add padding so browser default selection won't be noticed */
+ .highlight {
+     color: inherit;
+     background-color: var(--highlight-yellow);
+     padding: 2.8px 0;
+ }
+
+ .highlight.partial-highlight {
+    background-color: var(--highlight-partial);
+ } 
+
+ .highlight.full-highlight {
+    background-color: var(--highlight-full);
+ }
+
+ /* Put space above highlight-classification-list-group */
+ .highlight-classification-list-group {
+     margin-top: 10px;
+ }
+
+ /* Add clickable cursor on sentences hover */
+ .clickable {
+    cursor: pointer;
+ }
+
+ /* If textbox is empty, we can't edit because it doesn't know we are clicking it. Also, only clicking on direct text works. This is here to enable clicking anywhere in the textbox. See also https://draftjs.org/docs/advanced-topics-managing-focus */
+ .DraftEditor-root {
+     width: 100%;
+ }
+
+/* Highlighted phrase list component UI */
+ .highlighted-phrase-list-component {
+     padding-left: 5px;
+     padding-right: 5px;     
+ }
+
+ /* Delete highlighted phrase UI */
+ .highlighted-phrase-list-component:hover {
+     background-color: var(--highlight-remove);
+     cursor: pointer;
+ }
+
+ /* Add a cursor on the span to avoid the tooltip converting it to a help cursor */
+ .highlighted-phrase-list-component:hover span {
+     cursor: pointer;
+ }
+
+ /* Avoid blue highlighting */
+ .highlightable-container.highlightable > span::selection {
+    color: inherit;
+    background: var(--highlight-yellow);
+  }
+
+.highlightable-container.highlightable > span::-moz-selection {
+    color: inherit;
+    background: var(--highlight-yellow);
+}
+
+/* add some space before page numbers */
+.highlighted-phrases-list {
+    margin-bottom: 10px;
+}
+
+/* Make it clear there is a tooltip */
+.tooltip-available {
+    cursor: help;
+}
+
+/* Directions margin top */
+.directions {
+    margin-top: 10px;
+}
+
+/* Instructions list margin top */
+.instructions-list {
+    margin-top: 10px;
+
+}
+
+/* When submit disabled, change cursor to help so people know they can hover */
+.submit-disabled , .submit-disabled span {
+    cursor: help !important;
+}
+
+/* Add a cursor on the button to avoid the tooltip converting it to a help cursor */
+.submit-button span {
+    cursor: pointer;
+}
+
+/* Enable highlight to show when hovering over disabled buttons */
+.step-label, .submit-button {
+    pointer-events: all !important;
+}
+/* Used to differentiate data from other texts */
+.data-text, .data-citation {
+    font-family: Roboto;
+    font-size: 1.4rem;
+}
+
+.data-citation::before {
+    content: "\"";
+}
+
+.data-citation::after {
+    content: "\"";
+}
+
+/* merged text style */
+.merged-text-cell {
+    font-weight: 100;
+}
+
+/* align specific table cells to center */
+.table > thead th, .rating-num-column {
+    text-align: center;
+}
+
+/* Necessary to make sure small screens don't have the radio boxes split */
+.rank-column {
+    min-width: 13em;
+}
+
+
+/* Control the text diff of the turker additions */
+.turker-text-diff {
+    color: green;
+}
+
+/* Control the text diff of the turker removals */
+.turker-removed-color {
+    color: red;
+    text-decoration: line-through;
+}
+
+.instructions-row {
+    background: #EEEEEE;
+}
+
+.scale-col {
+    text-align: center;
+}
